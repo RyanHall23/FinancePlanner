@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FinancePlanner
+namespace FinancePlanner.Navigation_Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for OverviewPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OverviewPage : Page
     {
-        public MainWindow()
+        public OverviewPage()
         {
             InitializeComponent();
         }
