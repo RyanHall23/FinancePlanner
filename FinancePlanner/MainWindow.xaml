@@ -7,21 +7,21 @@
         mc:Ignorable="d"
         Title="Finance Planner 2020" Height="1050" Width="1920">
     <Grid>
-        <Menu x:Name="mnuPages" HorizontalAlignment="Left" Height="1019" VerticalAlignment="Top" Width="180" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
-            <MenuItem x:Name="mnubtnOverview" Header="Overview" Height="50" Width="180"/>
+        <Menu x:Name="menuPages" HorizontalAlignment="Left" Height="1019" VerticalAlignment="Top" Width="180" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+            <MenuItem x:Name="mnubtnOverview" Header="Overview" Height="50" Width="180" Click="mnubtnOverview_Click"/>
             <Separator HorizontalAlignment="Left" Height="50" Width="30" Margin="53,0,-53,0"/>
-            <MenuItem x:Name="mnubtnCurrentMonth" Header="Current Month" Height="50" Width="180"/>
-            <MenuItem x:Name="mnubtnCalendar" Header="Calendar" Height="50" Width="180"/>
-            <MenuItem x:Name="mnubtnAnnual" Header="Annual" Height="50" Width="180"/>
+            <MenuItem x:Name="mnubtnCurrentMonth" Header="Current Month" Height="50" Width="180" Click="mnubtnCurrentMonth_Click"/>
+            <MenuItem x:Name="mnubtnCalendar" Header="Calendar" Height="50" Width="180" Click="mnubtnCalendar_Click"/>
+            <MenuItem x:Name="mnubtnAnnual" Header="Annual" Height="50" Width="180" Click="mnubtnAnnual_Click"/>
             <Separator HorizontalAlignment="Left" Height="50" Width="30" Margin="53,0,-53,0"/>
-            <MenuItem x:Name="mnubtnExpenses" Header="Expenses" Height="50" Width="180"/>
-            <MenuItem x:Name="mnubtnSavings" Header="Savings" Height="50" Width="180"/>
-            <MenuItem x:Name="mnubtnPension" Header="Pension" Height="50" Width="180"/>
+            <MenuItem x:Name="mnubtnExpenses" Header="Expenses" Height="50" Width="180" Click="mnubtnExpenses_Click"/>
+            <MenuItem x:Name="mnubtnSavings" Header="Savings" Height="50" Width="180" Click="mnubtnSavings_Click"/>
+            <MenuItem x:Name="mnubtnPension" Header="Pension" Height="50" Width="180" Click="mnubtnPension_Click"/>
             <Separator HorizontalAlignment="Left" Height="510" Width="30" Margin="53,0,-53,0"/>
-            <MenuItem x:Name="mnubtnSettings" Header="Settings" Height="50" Width="180"/>
+            <MenuItem x:Name="mnubtnSettings" Header="Settings" Height="50" Width="180" Click="mnubtnSettings_Click"/>
         </Menu>
         <DockPanel Margin="185,0,0,0">
-            <Frame x:Name="NavigationFrame" NavigationUIVisibility="Hidden" Navigated="NavigationFrame_Navigated" />
+            <Frame x:Name="NavigationFrame" NavigationUIVisibility="Hidden"/>
         </DockPanel>
     </Grid>
 </Window>

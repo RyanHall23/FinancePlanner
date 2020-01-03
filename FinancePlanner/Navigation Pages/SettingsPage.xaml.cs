@@ -23,6 +23,7 @@ namespace FinancePlanner.Navigation_Pages
         public SettingsPage()
         {
             InitializeComponent();
+            lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
         }
     }
 }

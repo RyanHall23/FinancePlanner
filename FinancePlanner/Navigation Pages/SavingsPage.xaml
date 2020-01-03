@@ -10,5 +10,6 @@
 
     <Grid>
         <Label x:Name="lblESavings" Content="Savings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="lblDateTime" Content="" HorizontalAlignment="Left" Margin="1600,985,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
