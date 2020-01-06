@@ -63,6 +63,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Expenditures\CPension.cs" />
+    <Compile Include="Expenditures\CSavings.cs" />
+    <Compile Include="CIncome.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -80,6 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Navigation Pages\ExpensesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigation Pages\IncomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,8 +117,12 @@
     <Compile Include="Navigation Pages\CurrentMonthPage.xaml.cs">
       <DependentUpon>CurrentMonthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Expenditures\CExpenses.cs" />
     <Compile Include="Navigation Pages\ExpensesPage.xaml.cs">
       <DependentUpon>ExpensesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation Pages\IncomePage.xaml.cs">
+      <DependentUpon>IncomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Navigation Pages\OverviewPage.xaml.cs">
       <DependentUpon>OverviewPage.xaml</DependentUpon>
@@ -125,6 +136,7 @@
     <Compile Include="Navigation Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="COverview1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

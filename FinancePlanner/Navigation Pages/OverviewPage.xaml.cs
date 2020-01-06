@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FinancePlanner.Navigation_Pages
 {
@@ -20,10 +8,27 @@ namespace FinancePlanner.Navigation_Pages
     /// </summary>
     public partial class OverviewPage : Page
     {
+        CIncome income = new CIncome();
+        CExpenses expenses = new CExpenses();
+        CPension pension = new CPension();
+        CSavings savings = new CSavings();
+        
+
         public OverviewPage()
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
+
+            lblMarginAmnt.Content = income.GetSalary() - (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
+            // Income
+            lblInAmnt.Content = income.GetSalary();
+
+            //Outgoings
+            lblOutAmnt.Content = (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
+            lblExpensesAmnt.Content = expenses.GetYearlyExpenses();
+            lblPensionAmnt.Content = pension.GetYearlyPensionAmount();
+            lblSavingsAmnt.Content = savings.GetYearlyExpenses();
+
         }
     }
 }

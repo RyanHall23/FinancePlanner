@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FinancePlanner.Navigation_Pages
 {
@@ -20,10 +10,32 @@ namespace FinancePlanner.Navigation_Pages
     /// </summary>
     public partial class PensionPage : Page
     {
+        COverview ov = new COverview();
+        CPension pen = new CPension();
+
+        decimal decExpensesMo;
+
         public PensionPage()
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
+            lblPensionMonthAmnt.Content = pen.GetMonthlyPensionAmount();
+            lblPensionYearlyAmnt.Content = pen.GetYearlyPensionAmount();
+        }
+
+        private void btnCnfmMonthlyPension_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                decimal.TryParse(txtPensionMonthlyAmnt.Text, out decExpensesMo);
+                pen.SetMonthlyAndYearlyPension(decExpensesMo);
+                ov.SetPension(decExpensesMo);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
         }
     }
 }

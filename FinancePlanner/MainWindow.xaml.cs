@@ -52,42 +52,47 @@ namespace FinancePlanner
         /// <param name="sender"></param>
         /// <param name="e"></param>
         #region Menu Navigation
-        private void mnubtnOverview_Click(object sender, RoutedEventArgs e)
+        private void MnubtnOverview_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new OverviewPage());   // Open Overview page in dock panel
         }
 
-        private void mnubtnCurrentMonth_Click(object sender, RoutedEventArgs e)
+        private void MnubtnCurrentMonth_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new CurrentMonthPage());   // Open Current Month page in dock panel
         }
 
-        private void mnubtnCalendar_Click(object sender, RoutedEventArgs e)
+        private void MnubtnCalendar_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new CalendarPage());   // Open Calendar page in dock panel
         }
 
-        private void mnubtnAnnual_Click(object sender, RoutedEventArgs e)
+        private void MnubtnAnnual_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new AnnualPage());   // Open Annual page in dock panel
         }
 
-        private void mnubtnExpenses_Click(object sender, RoutedEventArgs e)
+        private void MnubtnIncome_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Navigate(new IncomePage());   // Open Annual page in dock panel
+        }
+
+        private void MnubtnExpenses_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new ExpensesPage());   // Open Expenses page in dock panel
         }
 
-        private void mnubtnSavings_Click(object sender, RoutedEventArgs e)
+        private void MnubtnSavings_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new SavingsPage());   // Open Savings page in dock panel
         }
 
-        private void mnubtnPension_Click(object sender, RoutedEventArgs e)
+        private void MnubtnPension_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new PensionPage());   // Open Pension page in dock panel
         }
 
-        private void mnubtnSettings_Click(object sender, RoutedEventArgs e)
+        private void MnubtnSettings_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new SettingsPage());   // Open Settings page in dock panel
         }

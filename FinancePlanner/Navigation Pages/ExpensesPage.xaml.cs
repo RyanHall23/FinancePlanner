@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,32 @@ namespace FinancePlanner.Navigation_Pages
     /// </summary>
     public partial class ExpensesPage : Page
     {
+        COverview ov = new COverview();
+        CExpenses exps = new CExpenses();
+
+        decimal decExpensesMo;
+
         public ExpensesPage()
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
+            lblExpensesMonthAmnt.Content = exps.GetMonthExpenses();
+            lblExpensesYearlyAmnt.Content = exps.GetYearlyExpenses();
+        }
+
+        private void BtnCnfmMonthlyExpenses_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                decimal.TryParse(txtExpensesMonthlyAmnt.Text, out decExpensesMo);
+                exps.SetMonthlyAndYearlyExpenses(decExpensesMo);
+                ov.SetExpense(decExpensesMo);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
         }
     }
 }
