@@ -27,7 +27,6 @@ namespace FinancePlanner.Navigation_Pages
             {
                 decimal.TryParse(txtSalary.Text, out decIncomeSalary);
                 income.SetSalary(decIncomeSalary);
-                this.Refresh();
             }
             catch(Exception ex)
             {

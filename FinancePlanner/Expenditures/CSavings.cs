@@ -9,7 +9,7 @@ namespace FinancePlanner.Navigation_Pages
         private static decimal s_YearSavings = 0.00m;
 
         /// <summary>
-        /// Income static constructor
+        /// Savings static constructor
         /// </summary>
         static CSavings() // Instanciating object
         {
@@ -27,7 +27,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Sets monthly expenses
+        /// Sets monthly and yearly savings
         /// </summary>
         /// <param name="a"></param>
         public void SetMonthlyAndYearlySavings(decimal monthly)   // Pass A through to keep members private
@@ -37,7 +37,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Gets monthly expenses
+        /// Gets monthly savings
         /// </summary>
         /// <returns></returns>
         public decimal GetMonthSavings()
@@ -46,7 +46,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Gets total expenses
+        /// Gets yearly savings
         /// </summary>
         /// <returns></returns>
         public decimal GetYearlyExpenses()

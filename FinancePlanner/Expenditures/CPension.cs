@@ -9,7 +9,7 @@ namespace FinancePlanner.Navigation_Pages
         private static decimal s_YearPension = 0.00m;
 
         /// <summary>
-        /// Income static constructor
+        /// Pension static constructor
         /// </summary>
         static CPension() // Instanciating object
         {
@@ -27,7 +27,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Sets monthly expenses
+        /// Sets monthly Pension and yearly pension
         /// </summary>
         /// <param name="a"></param>
         public void SetMonthlyAndYearlyPension(decimal monthly)   // Pass A through to keep members private
@@ -37,7 +37,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Gets monthly expenses
+        /// Gets monthly Pension
         /// </summary>
         /// <returns></returns>
         public decimal GetMonthlyPensionAmount()
@@ -46,7 +46,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Gets total expenses
+        /// Gets Yearly Pension
         /// </summary>
         /// <returns></returns>
         public decimal GetYearlyPensionAmount()

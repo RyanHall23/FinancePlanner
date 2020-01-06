@@ -46,7 +46,7 @@ namespace FinancePlanner.Navigation_Pages
         }
 
         /// <summary>
-        /// Gets total expenses
+        /// Gets Yearly Expenses
         /// </summary>
         /// <returns></returns>
         public decimal GetYearlyExpenses()

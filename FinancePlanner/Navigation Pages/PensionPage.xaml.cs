@@ -19,6 +19,7 @@ namespace FinancePlanner.Navigation_Pages
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
+            txtPensionMonthlyAmnt.Text = pen.GetMonthlyPensionAmount().ToString();
             lblPensionMonthAmnt.Content = pen.GetMonthlyPensionAmount();
             lblPensionYearlyAmnt.Content = pen.GetYearlyPensionAmount();
         }
