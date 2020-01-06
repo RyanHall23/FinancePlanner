@@ -11,5 +11,12 @@
     <Grid>
         <Label x:Name="lblESavings" Content="Savings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label x:Name="lblDateTime" Content="" HorizontalAlignment="Left" Margin="1600,985,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsYearly" Content="Savings (Year) :" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsYearlyAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsMonthly" Content="Savings (Monthly) :" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsMonthAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsMonthlyU" Content="Savings (Monthly) :" HorizontalAlignment="Left" Margin="15,218,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSavingsMonthlyAmnt" HorizontalAlignment="Left" Height="23" Margin="15,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCnfmMonthlySavings" Content="Confirm" HorizontalAlignment="Left" Margin="159,244,0,0" VerticalAlignment="Top" Width="75" Click="BtnCnfmMonthlyExpenses_Click"/>
     </Grid>
 </Page>

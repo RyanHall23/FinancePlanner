@@ -15,8 +15,15 @@
         <Label x:Name="lblExpensesYearlyAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblExpensesMonthly" Content="Expenses (Monthly) :" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblExpensesMonthAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,135,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblOutgoingsMonthly" Content="Expenses (Monthly) :" HorizontalAlignment="Left" Margin="15,218,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtExpensesMonthlyAmnt" HorizontalAlignment="Left" Height="23" Margin="15,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnCnfmMonthlyExpenses" Content="Confirm" HorizontalAlignment="Left" Margin="159,244,0,0" VerticalAlignment="Top" Width="75" Click="BtnCnfmMonthlyExpenses_Click"/>
+        <Label x:Name="lblOutgoingsMonthly" Content="Expenses (Monthly) :" HorizontalAlignment="Left" Margin="576,120,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtExpensesMonthlyAmnt" HorizontalAlignment="Left" Height="22" Margin="576,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCnfmMonthlyExpenses" Content="Confirm" HorizontalAlignment="Left" Margin="720,146,0,0" VerticalAlignment="Top" Width="75" Click="BtnCnfmMonthlyExpenses_Click"/>
+        <DataGrid x:Name="dataGridExpenses" HorizontalAlignment="Left" Height="818" Margin="10,182,0,0" VerticalAlignment="Top" Width="800" Background="{x:Null}" BorderBrush="{x:Null}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Expense" Width="600" />
+                <DataGridTextColumn Header="Amount" Width="100" />
+                <DataGridCheckBoxColumn Header="Re-Occuring?" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
