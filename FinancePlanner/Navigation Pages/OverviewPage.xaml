@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FinancePlanner.Navigation_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1019" d:DesignWidth="1727"
+      d:DesignHeight="1019" d:DesignWidth="1727" Language="en-GB"
       Title="OverviewPage">
 
     <Grid>
@@ -14,17 +14,23 @@
         </Grid.RowDefinitions>
         <Label x:Name="lblOverview" Content="Overview" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label x:Name="lblDateTime" Content="" HorizontalAlignment="Left" Margin="1600,985,0,0" VerticalAlignment="Top"/>
+        
         <Label x:Name="lblMargin" Content="Income Margin: " HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblMarginAmnt" Content="0.00" HorizontalAlignment="Left" Margin="100,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblIn" Content="Amount In: " HorizontalAlignment="Left" Margin="270,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblInAmnt" Content="0.00" HorizontalAlignment="Left" Margin="360,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblOut" Content="Amount Out: " HorizontalAlignment="Left" Margin="554,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblOutAmnt" Content="0.00" HorizontalAlignment="Left" Margin="648,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblOutExpenses" Content="Expenses Out: " HorizontalAlignment="Left" Margin="549,173,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblExpensesAmnt" Content="0.00" HorizontalAlignment="Left" Margin="639,173,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSavings" Content="Savings Out: " HorizontalAlignment="Left" Margin="549,216,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSavingsAmnt" Content="0.00" HorizontalAlignment="Left" Margin="639,216,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblPension" Content="Pension Out: " HorizontalAlignment="Left" Margin="549,257,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblPensionAmnt" Content="0.00" HorizontalAlignment="Left" Margin="639,257,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMarginAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="100,95,0,0" VerticalAlignment="Top"/>
+        
+        <Label x:Name="lblIn" Content="Amount In: " HorizontalAlignment="Left" Margin="210,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblInAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="300,95,0,0" VerticalAlignment="Top"/>
+        
+        <Label x:Name="lblOut" Content="Amount Out: " HorizontalAlignment="Left" Margin="410,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblOutAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="500,95,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="lblOutExpenses" Content="Expenses Out: " HorizontalAlignment="Left" Margin="410,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblExpensesAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="500,190,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="lblSavings" Content="Savings Out: " HorizontalAlignment="Left" Margin="410,240,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSavingsAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="500,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.538"/>
+
+        <Label x:Name="lblPension" Content="Pension Out: " HorizontalAlignment="Left" Margin="410,290,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPensionAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="500,290,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -5,16 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FinancePlanner.Navigation_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1019" d:DesignWidth="1727"
+      d:DesignHeight="1019" d:DesignWidth="1727" Language="en-GB"
       Title="ExpensesPage">
 
     <Grid>
         <Label x:Name="lblExpenses" Content="Expenses" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label x:Name="lblDateTime" Content="" HorizontalAlignment="Left" Margin="1600,985,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblExpensesYearly" Content="Expenses (Year) :" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblExpensesYearlyAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblExpensesYearlyAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="130,95,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblExpensesMonthly" Content="Expenses (Monthly) :" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblExpensesMonthAmnt" Content="0.00" HorizontalAlignment="Left" Margin="130,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblExpensesMonthAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="130,135,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblOutgoingsMonthly" Content="Expenses (Monthly) :" HorizontalAlignment="Left" Margin="576,120,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtExpensesMonthlyAmnt" HorizontalAlignment="Left" Height="22" Margin="576,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnCnfmMonthlyExpenses" Content="Confirm" HorizontalAlignment="Left" Margin="720,146,0,0" VerticalAlignment="Top" Width="75" Click="BtnCnfmMonthlyExpenses_Click"/>

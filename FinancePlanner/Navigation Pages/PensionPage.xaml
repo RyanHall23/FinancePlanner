@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FinancePlanner.Navigation_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1019" d:DesignWidth="1727"
+      d:DesignHeight="1019" d:DesignWidth="1727" Language="en-GB"
       Title="PensionPage">
 
     <Grid>

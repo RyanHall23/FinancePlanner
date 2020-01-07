@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinancePlanner"
         mc:Ignorable="d"
-        Title="Finance Planner 2020" Height="1050" Width="1920">
+        Title="Finance Planner 2020" Height="1050" Width="1920" Language="en-GB">
     <Grid>
         <Menu x:Name="menuPages" HorizontalAlignment="Left" Height="1019" VerticalAlignment="Top" Width="180" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
             <MenuItem x:Name="mnubtnOverview" Header="Overview" Height="50" Width="180" Click="MnubtnOverview_Click"/>

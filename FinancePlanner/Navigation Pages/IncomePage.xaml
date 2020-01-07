@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FinancePlanner.Navigation_Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1019" d:DesignWidth="1727"
+      d:DesignHeight="1019" d:DesignWidth="1727" Language="en-GB"
       Title="IncomePage">
 
     <Grid>
@@ -15,6 +15,6 @@
         <TextBox x:Name="txtSalary" HorizontalAlignment="Left" Height="23" Margin="10,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnCnfmSalary" Content="Confirm" HorizontalAlignment="Left" Margin="182,111,0,0" VerticalAlignment="Top" Width="75" Click="BtnCnfmSalary_Click"/>
         <Label x:Name="lblSalaryMonth" Content="Salary (Month) :" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.468,0.513"/>
-        <Label x:Name="lblSalaryMonthAmnt" Content="0.00" HorizontalAlignment="Left" Margin="115,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.468,0.513"/>
+        <Label x:Name="lblSalaryMonthAmnt" Content="{Binding Amount}" ContentStringFormat="C" HorizontalAlignment="Left" Margin="115,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.468,0.513"/>
     </Grid>
 </Page>

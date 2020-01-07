@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinancePlanner.Expenditures;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +24,8 @@ namespace FinancePlanner.Navigation_Pages
             txtExpensesMonthlyAmnt.Text = exps.GetMonthExpenses().ToString();
             lblExpensesMonthAmnt.Content = exps.GetMonthExpenses();
             lblExpensesYearlyAmnt.Content = exps.GetYearlyExpenses();
+
+            CExpense a = new CExpense("",0.00m,false);
         }
 
         private void BtnCnfmMonthlyExpenses_Click(object sender, RoutedEventArgs e)
