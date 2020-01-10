@@ -12,22 +12,22 @@ namespace FinancePlanner.Navigation_Pages
         CExpenses expenses = new CExpenses();
         CPension pension = new CPension();
         CSavings savings = new CSavings();
-        
+
 
         public OverviewPage()
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
 
-            lblMarginAmnt.Content = income.GetSalary() - (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
+            lblMarginAmt.Content = income.GetSalary() - (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
             // Income
-            lblInAmnt.Content = income.GetSalary();
+            lblInAmt.Content = income.GetSalary();
 
             //Outgoings
-            lblOutAmnt.Content = (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
-            lblExpensesAmnt.Content = expenses.GetYearlyExpenses();
-            lblPensionAmnt.Content = pension.GetYearlyPensionAmount();
-            lblSavingsAmnt.Content = savings.GetYearlyExpenses();
+            lblOutAmt.Content = (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
+            lblExpensesAmt.Content = expenses.GetYearlyExpenses();
+            lblPensionAmt.Content = pension.GetYearlyPensionAmount();
+            lblSavingsAmt.Content = savings.GetYearlyExpenses();
 
         }
     }

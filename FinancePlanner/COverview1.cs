@@ -1,8 +1,4 @@
-﻿using FinancePlanner.Navigation_Pages;
-using System;
-using System.Diagnostics;
-
-namespace FinancePlanner
+﻿namespace FinancePlanner
 {
     class COverview
     {

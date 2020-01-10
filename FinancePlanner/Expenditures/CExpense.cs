@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FinancePlanner.Expenditures
 {
@@ -20,7 +16,7 @@ namespace FinancePlanner.Expenditures
                 m_decAmount = eAmount;
                 m_bRec = eRec;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }

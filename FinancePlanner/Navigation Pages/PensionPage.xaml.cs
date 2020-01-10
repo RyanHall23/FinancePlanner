@@ -19,16 +19,16 @@ namespace FinancePlanner.Navigation_Pages
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
-            txtPensionMonthlyAmnt.Text = pen.GetMonthlyPensionAmount().ToString();
-            lblPensionMonthAmnt.Content = pen.GetMonthlyPensionAmount();
-            lblPensionYearlyAmnt.Content = pen.GetYearlyPensionAmount();
+            txtPensionMonthlyAmt.Text = pen.GetMonthlyPensionAmount().ToString();
+            lblPensionMonthAmt.Content = pen.GetMonthlyPensionAmount();
+            lblPensionYearlyAmt.Content = pen.GetYearlyPensionAmount();
         }
 
-        private void btnCnfmMonthlyPension_Click(object sender, RoutedEventArgs e)
+        private void BtnConfMonthlyPension_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                decimal.TryParse(txtPensionMonthlyAmnt.Text, out decExpensesMo);
+                decimal.TryParse(txtPensionMonthlyAmt.Text, out decExpensesMo);
                 pen.SetMonthlyAndYearlyPension(decExpensesMo);
                 ov.SetPension(decExpensesMo);
             }

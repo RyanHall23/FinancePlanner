@@ -1,6 +1,4 @@
-﻿using FinancePlanner.Expenditures;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,18 +19,19 @@ namespace FinancePlanner.Navigation_Pages
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
-            txtExpensesMonthlyAmnt.Text = exps.GetMonthExpenses().ToString();
-            lblExpensesMonthAmnt.Content = exps.GetMonthExpenses();
-            lblExpensesYearlyAmnt.Content = exps.GetYearlyExpenses();
+            txtExpensesMonthlyAmt.Text = exps.GetMonthExpenses().ToString();
+            lblExpensesMonthAmt.Content = exps.GetMonthExpenses();
+            lblExpensesYearlyAmt.Content = exps.GetYearlyExpenses();
 
-            CExpense a = new CExpense("",0.00m,false);
+            // CExpense a = new CExpense("Travel", 94.0m, true);  // Example of Expense object to be added into expense table/report
+
         }
 
-        private void BtnCnfmMonthlyExpenses_Click(object sender, RoutedEventArgs e)
+        private void BtnConfMonthlyExpenses_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                decimal.TryParse(txtExpensesMonthlyAmnt.Text, out decExpensesMo);
+                decimal.TryParse(txtExpensesMonthlyAmt.Text, out decExpensesMo);
                 exps.SetMonthlyAndYearlyExpenses(decExpensesMo);
                 ov.SetExpense(decExpensesMo);
             }

@@ -18,17 +18,17 @@ namespace FinancePlanner.Navigation_Pages
         {
             InitializeComponent();
             txtSalary.Text = income.GetSalary().ToString();
-            lblSalaryMonthAmnt.Content = income.GetMonthlySalary();
+            lblSalaryMonthAmt.Content = income.GetMonthlySalary();
         }
 
-        private void BtnCnfmSalary_Click(object sender, RoutedEventArgs e)
+        private void BtnConfSalary_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 decimal.TryParse(txtSalary.Text, out decIncomeSalary);
                 income.SetSalary(decIncomeSalary);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }

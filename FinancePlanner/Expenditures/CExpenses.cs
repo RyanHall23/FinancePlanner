@@ -33,7 +33,7 @@ namespace FinancePlanner.Navigation_Pages
         public void SetMonthlyAndYearlyExpenses(decimal monthly)   // Pass A through to keep members private
         {
             s_MonthExpenses = monthly;
-            s_YearExpenses = (monthly*12);    // Set total expenses by multiplying monthly expenses by 12
+            s_YearExpenses = (monthly * 12);    // Set total expenses by multiplying monthly expenses by 12
         }
 
         /// <summary>
