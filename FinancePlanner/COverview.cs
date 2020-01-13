@@ -2,12 +2,13 @@
 {
     class COverview
     {
-        private static decimal s_Margin;     // Yearly
-        private static decimal s_Income;     // Yearly
-        private static decimal s_TotalOut;   // Total = Income - (Expense + Savings + Pension)
-        private static decimal s_Expense;    // Monthly
-        private static decimal s_Savings;    // Monthly
-        private static decimal s_Pension;    // Monthly
+        private static decimal s_Margin;            // Yearly
+        private static decimal s_Income;            // Yearly
+        private static decimal s_TotalOut;          // Total = Income - (Expense + Savings + Pension)
+        private static decimal s_Expense;           // Monthly
+        private static decimal s_Savings;           // Monthly
+        private static double  s_PensionPercent;    // Percentage to be calcuated from wages
+        private static decimal s_Pension;           // Yearly Total
 
         static COverview() // Instanciating object
         {
@@ -69,14 +70,24 @@
         }
 
         // Pension
-        public void SetPension(decimal a)
+        public void SetPensionAmt(decimal a)
         {
             s_Pension = a;
         }
 
-        public decimal GetPension()
+        public decimal GetPensionAmt()
         {
             return s_Pension;
+        }
+
+        public void SetPensionPer(double a)
+        {
+            s_PensionPercent = a;
+        }
+
+        public double GetPensionPer()
+        {
+            return s_PensionPercent;
         }
     }
 }

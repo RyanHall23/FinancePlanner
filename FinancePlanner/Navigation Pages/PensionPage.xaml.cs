@@ -13,13 +13,13 @@ namespace FinancePlanner.Navigation_Pages
         COverview ov = new COverview();
         CPension pen = new CPension();
 
-        decimal decExpensesMo;
+        double dPercentPension;
 
         public PensionPage()
         {
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
-            txtPensionMonthlyAmt.Text = pen.GetMonthlyPensionAmount().ToString();
+            txtPensionPercent.Text = pen.GetMonthlyPensionAmount().ToString();  // Perecentage of Yearly salary to be deducted into pension
             lblPensionMonthAmt.Content = pen.GetMonthlyPensionAmount();
             lblPensionYearlyAmt.Content = pen.GetYearlyPensionAmount();
         }
@@ -28,9 +28,8 @@ namespace FinancePlanner.Navigation_Pages
         {
             try
             {
-                decimal.TryParse(txtPensionMonthlyAmt.Text, out decExpensesMo);
-                pen.SetMonthlyAndYearlyPension(decExpensesMo);
-                ov.SetPension(decExpensesMo);
+                double.TryParse(txtPensionPercent.Text, out dPercentPension);
+                pen.SetMonthlyAndYearlyPension(dPercentPension);    // Logic is carried out within the Pension Class
             }
             catch (Exception ex)
             {
