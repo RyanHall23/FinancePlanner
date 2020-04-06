@@ -5,28 +5,17 @@ namespace FinancePlanner.Navigation_Pages
 {
     class CPension
     {
+        COverview ov = new COverview();
+
         private static decimal s_MonthPension = 0.00m;
         private static decimal s_YearPension = 0.00m;
-        private static double  s_PercentPension = 0;
+        private static decimal s_PercentPension = 0.00m;
 
         /// <summary>
         /// Pension static constructor
         /// </summary>
         static CPension() // Instanciating object
         {
-            // Try catch for object creation, if destination is failed to be found
-            try
-            {
-                // Initialise value
-
-                s_MonthPension = 0; 
-                s_YearPension = 0 ;
-                s_PercentPension = 0;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
 
         }
 
@@ -34,10 +23,14 @@ namespace FinancePlanner.Navigation_Pages
         /// Sets monthly Pension and yearly pension
         /// </summary>
         /// <param name="a"></param>
-        public void SetMonthlyAndYearlyPension(double percentage)   // Pass A through to keep members private
+        public void SetPercentageAmount(decimal percentage)   // Pass A through to keep members private
         {
-            COverview ov = new COverview();
-            ov.SetPensionPer(percentage);
+            s_PercentPension = percentage;
+            s_YearPension = ((s_PercentPension / 100) * ov.GetIncomeYear());
+            s_MonthPension = (s_YearPension / 12);
+            ov.SetPensionPer(s_PercentPension);
+            ov.SetPensionAmt(s_YearPension);
+
             //Calculate income from percentage paid to pension and copy to overview Class
 
         }

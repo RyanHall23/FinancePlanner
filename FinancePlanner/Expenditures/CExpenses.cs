@@ -5,6 +5,7 @@ namespace FinancePlanner.Navigation_Pages
 {
     class CExpenses
     {
+        COverview ov = new COverview();
         private static decimal s_MonthExpenses = 0.00m;
         private static decimal s_YearExpenses = 0.00m;
 
@@ -13,16 +14,6 @@ namespace FinancePlanner.Navigation_Pages
         /// </summary>
         static CExpenses() // Instanciating object
         {
-            // Try catch for object creation, if destination is failed to be found
-            try
-            {
-                s_MonthExpenses = 0; // Initialise value
-                s_YearExpenses = s_MonthExpenses * 12; ;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
 
         }
 
@@ -30,10 +21,11 @@ namespace FinancePlanner.Navigation_Pages
         /// Sets monthly expenses & yearly expenses
         /// </summary>
         /// <param name="a"></param>
-        public void SetMonthlyAndYearlyExpenses(decimal monthly)   // Pass A through to keep members private
+        public void SetMonthlyAndYearlyExpenses(decimal monthly)   // Pass "monthly" through to keep members private
         {
             s_MonthExpenses = monthly;
-            s_YearExpenses = (monthly * 12);    // Set total expenses by multiplying monthly expenses by 12
+            s_YearExpenses = (monthly * 12);            // Set total reoccuring expenses by multiplying monthly expenses by 12
+            ov.SetMonthlyAndYearlyExpensesTotal(monthly);    // Auto monthly & yearly expenses in overview
         }
 
         /// <summary>

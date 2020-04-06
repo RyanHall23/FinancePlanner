@@ -13,7 +13,7 @@ namespace FinancePlanner.Navigation_Pages
         COverview ov = new COverview();
         CPension pen = new CPension();
 
-        double dPercentPension;
+        decimal dPercentPension;
 
         public PensionPage()
         {
@@ -28,8 +28,8 @@ namespace FinancePlanner.Navigation_Pages
         {
             try
             {
-                double.TryParse(txtPensionPercent.Text, out dPercentPension);
-                pen.SetMonthlyAndYearlyPension(dPercentPension);    // Logic is carried out within the Pension Class
+                decimal.TryParse(txtPensionPercent.Text, out dPercentPension);
+                pen.SetPercentageAmount(dPercentPension);    // Logic is carried out within the Pension Class
             }
             catch (Exception ex)
             {

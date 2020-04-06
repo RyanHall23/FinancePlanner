@@ -19,9 +19,9 @@ namespace FinancePlanner.Navigation_Pages
             InitializeComponent();
             lblDateTime.Content = DateTime.Now.ToShortDateString(); // Sets the Date label to the current Date
 
-            lblMarginAmt.Content = income.GetSalary() - (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
+            lblMarginAmt.Content = income.GetSalaryYear() - (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());
             // Income
-            lblInAmt.Content = income.GetSalary();
+            lblInAmt.Content = income.GetSalaryYear();
 
             //Outgoings
             lblOutAmt.Content = (expenses.GetYearlyExpenses() + pension.GetYearlyPensionAmount() + savings.GetYearlyExpenses());

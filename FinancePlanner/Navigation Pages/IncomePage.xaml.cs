@@ -17,8 +17,8 @@ namespace FinancePlanner.Navigation_Pages
         public IncomePage()
         {
             InitializeComponent();
-            txtSalary.Text = income.GetSalary().ToString();
-            lblSalaryMonthAmt.Content = income.GetMonthlySalary();
+            txtSalary.Text = income.GetSalaryYear().ToString();
+            lblSalaryMonthAmt.Content = income.GetSalaryMonth();
         }
 
         private void BtnConfSalary_Click(object sender, RoutedEventArgs e)

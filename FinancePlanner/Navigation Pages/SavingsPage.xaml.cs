@@ -30,7 +30,7 @@ namespace FinancePlanner.Navigation_Pages
             {
                 decimal.TryParse(txtSavingsMonthlyAmt.Text, out decExpensesMo);
                 svgs.SetMonthlyAndYearlySavings(decExpensesMo);
-                ov.SetExpense(decExpensesMo);
+                ov.SetMonthlyAndYearlyExpensesTotal(decExpensesMo);
             }
             catch (Exception ex)
             {

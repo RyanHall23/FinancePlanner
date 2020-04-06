@@ -2,15 +2,33 @@
 {
     class COverview
     {
-        private static decimal s_Margin;            // Yearly
-        private static decimal s_Income;            // Yearly
-        private static decimal s_TotalOut;          // Total = Income - (Expense + Savings + Pension)
-        private static decimal s_Expense;           // Monthly
-        private static decimal s_Savings;           // Monthly
-        private static double  s_PensionPercent;    // Percentage to be calcuated from wages
-        private static decimal s_Pension;           // Yearly Total
+        // Single Expense
 
-        static COverview() // Instanciating object
+        // Expenses
+        private static decimal s_ExpenseTotalY;        // Yearly - Auto set from \/ (*12)
+        private static decimal s_ExpenseTotalM;         // Monthly                <-
+
+        // Income
+        private static decimal s_IncomeY;               // Yearly                 <-
+        private static decimal s_IncomeM;              // Monthly - Auto set from /\ (/12)
+
+        // Pension
+        private static decimal s_PensionPercent;     // Percentage to be calcuated from wages
+        private static decimal s_PensionY;          // Yearly Total
+        private static decimal s_PensionM;          // Monthly Total
+
+        // Savings
+        private static decimal s_SavingsY;          // Yearly
+        private static decimal s_SavingsM;          // Monthly
+
+        // Overview (Strictly)
+        private static decimal s_MarginY;           // Yearly
+        private static decimal s_MarginM;            // Monthly
+        private static decimal s_TotalOutY;         // Total = Income - (Expense + Savings + Pension)
+
+
+        // Instanciating object
+        static COverview()
         {
             // Create
         }
@@ -18,74 +36,90 @@
         // Margin
         public static void SetMargin(decimal a)
         {
-            s_Margin = a;
+            s_MarginY = a;
         }
 
         public static decimal GetMargin()
         {
-            return s_Margin;
+            return s_MarginY;
         }
 
-        // Income
+        /// Income
+        //Sets Income Yearly and Monthly
         public void SetIncome(decimal a)
         {
-            s_Income = a;
+            s_IncomeY = a;
+            s_IncomeM = (a / 12);
         }
-        public decimal GetIncome()
+
+        // Gets Yearly Income
+        public decimal GetIncomeYear()
         {
-            return s_Income;
+            return s_IncomeY;
+        }
+
+        public decimal GetIncomeMonth()
+        {
+            return s_IncomeM;
         }
 
         // Total Out
         public void SetTotalOut(decimal a)
         {
-            s_TotalOut = a;
+            s_TotalOutY = a;
         }
 
         public decimal GetTotalOut()
         {
-            return s_TotalOut;
+            return s_TotalOutY;
         }
 
         // Expenses
-        public void SetExpense(decimal a)
+        public void SetMonthlyAndYearlyExpensesTotal(decimal a)
         {
-            s_Expense = a;
+            s_ExpenseTotalM = a;
+            s_ExpenseTotalY = (a * 12);
         }
 
-        public decimal GetExpenses()
+        public decimal GetExpensesTotalMonth()
         {
-            return s_Expense;
+            return s_ExpenseTotalM;
+        }
+
+        public decimal GetExpensesTotalYear()
+        {
+            return s_ExpenseTotalY;
         }
 
         // Savings
         public void SetSavings(decimal a)
         {
-            s_Savings = a;
+            s_SavingsM = a;
         }
 
         public decimal GetSavings()
         {
-            return s_Savings;
+            return s_SavingsM;
         }
 
         // Pension
         public void SetPensionAmt(decimal a)
         {
-            s_Pension = a;
+            s_PensionY = a;
+            s_PensionM = (a / 12);
         }
 
         public decimal GetPensionAmt()
         {
-            return s_Pension;
+            return s_PensionY;
         }
 
-        public void SetPensionPer(double a)
+        public void SetPensionPer(decimal a)
         {
             s_PensionPercent = a;
         }
 
-        public double GetPensionPer()
+        public decimal GetPensionPer()
         {
             return s_PensionPercent;
         }
