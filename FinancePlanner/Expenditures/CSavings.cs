@@ -25,7 +25,7 @@ namespace FinancePlanner.Navigation_Pages
         {
             s_MonthSavings = monthly;
             s_YearSavings = (monthly * 12);    // Set total expenses by multiplying monthly expenses by 12
-            ov.SetSavings()
+            ov.SetSavings(monthly);
         }
 
         /// <summary>
